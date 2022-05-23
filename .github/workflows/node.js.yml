@@ -26,11 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: sudo apt-get install libssl-dev
-    - run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-    - run: nvm install 10
-    - run: nvm use 10
-    - run: nvm alias default 10
+
     - run: npm i
     - run: npm run dev
     - run: npm test
